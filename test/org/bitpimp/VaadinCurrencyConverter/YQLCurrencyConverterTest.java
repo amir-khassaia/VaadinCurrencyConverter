@@ -45,4 +45,13 @@ public class YQLCurrencyConverterTest {
 		}
 	}
 	
+	@Test
+	public void currencyConverterTestInvalid() {
+		Assert.assertNull(converter.convert(null, null));
+		Assert.assertNull(converter.convert("", ""));
+		Assert.assertNull(converter.convert("AUD", ""));
+		Assert.assertNull(converter.convert("a", "a"));
+		Assert.assertNull(converter.convert("aaaaa", "aaa"));
+	}
+	
 }

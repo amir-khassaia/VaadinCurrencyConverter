@@ -66,6 +66,8 @@ public class YQLCurrencyConverter {
 	public String convert(final String fromCurrency, final String toCurrency)  {
 		if (Strings.isNullOrEmpty(fromCurrency) || Strings.isNullOrEmpty(toCurrency))
 			return null;
+		if (fromCurrency.length() != 3 || toCurrency.length() != 3)
+			return null;
 
 		// Make a cache key and try from cache first
 		final String key = String.format("%s.%s", fromCurrency, toCurrency);
