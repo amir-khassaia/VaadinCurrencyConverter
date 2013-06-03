@@ -43,8 +43,8 @@ public class YQLCurrencyConverter {
 		this(null);
 	}
 	
-	public YQLCurrencyConverter(final JsonReader service) {
-		this.reader = service != null ? service : new JsonReader() {
+	public YQLCurrencyConverter(final JsonReader reader) {
+		this.reader = reader != null ? reader : new JsonReader() {
 			/**
 			 * Default JSON reader just uses the helper to fetch and parse JSON
 			 */
